@@ -47,38 +47,57 @@
 
 \section{Introduction: Point matching in Visual SLAM}
 
-\paragraph{Installation} If the document class \emph{elsarticle} is not available on your computer, you can download and install the system package \emph{texlive-publishers} (Linux) or install the \LaTeX\ package \emph{elsarticle} using the package manager of your \TeX\ installation, which is typically \TeX\ Live or Mik\TeX.
+\paragraph{Data Association and Point Matching in Semantic SLAM} 
+Semantically-labeled landmarks address two critical issues of geometric SLAM: data association (matching sensor observations to map landmarks) and loop closure (recognizing previously-visited locations).
 
-\paragraph{Usage} Once the package is properly installed, you can use the document class \emph{elsarticle} to create a manuscript. Please make sure that your manuscript follows the guidelines in the Guide for Authors of the relevant journal. It is not necessary to typeset your manuscript in exactly the same way as an article, unless you are submitting to a camera-ready copy (CRC) journal.
+Point level.
+Semantic points = Descriptor
+In theory: Data Association and Optimization
+In practical: There are three scale level for point matching
 
-\paragraph{Functionality} The Elsevier article class is based on the standard article class and supports almost all of the functionality of that class. In addition, it features commands and options to format the
 \begin{itemize}
-\item document style
-\item baselineskip
-\item front matter
-\item keywords and MSC codes
-\item theorems, definitions and proofs
-\item lables of enumerations
-\item citation style and labeling.
+	\item Image level (low)
+	\item Local map level (mid)
+	\item Global map level (high - for loop closing)
 \end{itemize}
 
-\section{Front matter}
+Point matching cases:
+\begin{itemize}
+	\item Odometry: image level
+	\item Local bundle adjustment (Local BA).
+	\item Relocalization case: Kid-napped robot
+\end{itemize}
 
-The author names and affiliations could be formatted in two ways:
-\begin{enumerate}[(1)]
-\item Group the authors per affiliation.
-\item Use footnotes to indicate the affiliations.
+\paragraph{Challenge in UAV inspection} 
+Repetitive structures ...
+Weak GPS signals ...
+Solution: 
+\begin{enumerate}[(i)]
+	\item More addition sensors - more constraints
+	\item Sophisticating data association method
 \end{enumerate}
-See the front matter of this document for examples. You are recommended to conform your choice to the journal you are submitting to.
 
-\section{Bibliography styles}
+\paragraph{Outlines} 
+In this paper, we ...
 
-There are various bibliography styles available. You can select the style of your choice in the preamble of this document. These styles are Elsevier styles based on standard styles like Harvard and Vancouver. Please use Bib\TeX\ to generate your bibliography and include DOIs whenever available.
+\section{Problems solving}
 
-Here are two sample references: \cite{Feynman1963118,Dirac1953888}.
+\subsection{Approaches}
+- Features descriptor
+
+- ...
+
+- ...
+
+- ...
+
+\subsection{Experiment}
+
+
+% Here are two sample references: \cite{Feynman1963118,Dirac1953888}.
 
 \section*{References}
 
-\bibliography{mybibfile}
+% \bibliography{mybibfile}
 
 \end{document}
